@@ -1,0 +1,7 @@
+category: Gnome Net
+requires: libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk-vnc1.0_0 libgtk2.0_0 libview2
+sdesc: "GTK+ VNC viewer widget (example viewer)"
+ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 
+coroutines allowing it to be completely asynchronous while remaining 
+single threaded. It provides a core C library, and bindings for Python 
+(PyGTK)."

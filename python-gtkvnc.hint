@@ -1,0 +1,8 @@
+category: Gnome Net Python
+requires: libgcc1 libglib2.0_0 libgtk2.0_0 libgtk-vnc1.0_0 python python-gobject2.0 python-gtk2.0
+external-source: gtk-vnc
+sdesc: "GTK+ VNC viewer widget (Python bindings)"
+ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 
+coroutines allowing it to be completely asynchronous while remaining 
+single threaded. It provides a core C library, and bindings for Python 
+(PyGTK)."
