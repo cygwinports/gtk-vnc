@@ -1,5 +1,5 @@
 category: Gnome Net
-requires: libcairo2 libgcc1 libgcrypt11 libgdk_pixbuf2.0_0 libglib2.0_0 libgnutls26 libgtk2.0_0 libsasl2 libX11_6 zlib0
+requires: libcairo2 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libgvnc1.0_0 libX11_6
 external-source: gtk-vnc
 sdesc: "GTK+ VNC viewer widget (runtime)"
 ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 

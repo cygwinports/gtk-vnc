@@ -1,0 +1,26 @@
+--- origsrc/gtk-vnc-0.4.1/configure.ac	2010-07-14 05:28:15.000000000 -0500
++++ src/gtk-vnc-0.4.1/configure.ac	2010-09-20 21:23:30.263769000 -0500
+@@ -137,7 +137,7 @@ case "$host" in
+     ;;
+ 
+   *-*-cygwin*)
+-    NO_UNDEFINED_LDFLAGS="-no-undefined"
++    NO_UNDEFINED_FLAGS="-no-undefined"
+     ;;
+ 
+   *)
+--- origsrc/gtk-vnc-0.4.1/src/Makefile.am	2010-07-14 05:28:15.000000000 -0500
++++ src/gtk-vnc-0.4.1/src/Makefile.am	2010-09-20 19:06:08.294697500 -0500
+@@ -198,10 +198,10 @@ CLEANFILES = vncmarshal.c vncmarshal.h \
+ if WITH_PYTHON
+ pyexec_LTLIBRARIES = gtkvnc.la
+ 
+-gtkvnc_la_LIBADD = libgtk-vnc-$(GTK_VNC_API_VERSION).la @PYGTK_LIBS@
++gtkvnc_la_LIBADD = libgtk-vnc-$(GTK_VNC_API_VERSION).la @PYGTK_LIBS@ -lpython$(PYTHON_VERSION)
+ gtkvnc_la_CFLAGS = @GTK_CFLAGS@ @PYTHON_INCLUDES@ \
+ 		   @PYGTK_CFLAGS@ @WARNING_PYTHON_CFLAGS@
+-gtkvnc_la_LDFLAGS = -module -avoid-version -fPIC
++gtkvnc_la_LDFLAGS = -module -avoid-version $(NO_UNDEFINED_FLAGS)
+ gtkvnc_la_SOURCES = vncmodule.c vncmodule.defs.c
+ 
+ CODEGENDIR = $(shell pkg-config --variable=codegendir pygtk-2.0)
