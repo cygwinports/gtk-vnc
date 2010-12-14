@@ -32,6 +32,8 @@ Build requirements:
   gnome-common-2.28.0-2
   libtool-2.2.7a-15
   make-3.81-2
+  perl
+  perl-Text-CSV
   pkg-config-0.23b-10
 
 Canonical website:

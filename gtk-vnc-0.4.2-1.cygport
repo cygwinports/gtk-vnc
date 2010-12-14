@@ -19,11 +19,10 @@ python_gtkvnc_CONTENTS="${PYTHON_SITELIB#/}"
 DIFF_EXCLUDES="config.hin"
 DISTCLEANFILES="src/*enums.*"
 
-ACLOCAL_FLAGS="-I gnulib/m4"
 CYGCONF_ARGS+="
 	--disable-plugin
 	--with-coroutine=gthread
-	--with-examples --with-libview
+	--with-examples --without-libview
 	--with-gtk=2.0
 	ac_cv_header_winsock2_h=no
 "
