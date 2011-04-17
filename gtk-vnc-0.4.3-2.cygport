@@ -3,18 +3,15 @@ inherit pygtk gnome2
 DESCRIPTION="GTK+ VNC viewer widget"
 HOMEPAGE="http://gtk-vnc.sourceforge.net/"
 
-PATCH_URI="0.4.1-python-no-undefined.patch"
-
-PKG_NAMES="${PN} libgtk-vnc1.0_0 libgtk-vnc1.0-devel girepository-GtkVnc1.0
-                 libgvnc1.0_0 libgvnc1.0-devel girepository-GVnc1.0 python-gtkvnc"
+PKG_NAMES="${PN} libgtk-vnc2.0_0 libgtk-vnc2.0-devel girepository-GtkVnc2.0
+                 libgvnc1.0_0 libgvnc1.0-devel girepository-GVnc1.0"
 gtk_vnc_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/locale/ usr/share/man/"
-libgtk_vnc1_0_0_CONTENTS="usr/bin/cyggtk-vnc-1.0-0.dll"
-libgtk_vnc1_0_devel_CONTENTS="usr/include/gtk-vnc-1.0/ usr/lib/libgtk-vnc-1.0.* usr/lib/pkgconfig/gtk-vnc-1.0.pc"
+libgtk_vnc2_0_0_CONTENTS="usr/bin/cyggtk-vnc-2.0-0.dll"
+libgtk_vnc2_0_devel_CONTENTS="usr/include/gtk-vnc-2.0/ usr/lib/libgtk-vnc-2.0.* usr/lib/pkgconfig/gtk-vnc-2.0.pc"
 libgvnc1_0_0_CONTENTS="usr/bin/cyggvnc-1.0-0.dll"
 libgvnc1_0_devel_CONTENTS="usr/include/gvnc-1.0/ usr/lib/libgvnc-1.0.* usr/lib/pkgconfig/gvnc-1.0.pc"
-girepository_GtkVnc1_0_CONTENTS="usr/*/gir*/GtkVnc-1.0.*"
+girepository_GtkVnc2_0_CONTENTS="usr/*/gir*/GtkVnc-2.0.*"
 girepository_GVnc1_0_CONTENTS="usr/*/gir*/GVnc-1.0.*"
-python_gtkvnc_CONTENTS="${PYTHON_SITELIB#/}"
 
 DIFF_EXCLUDES="config.hin"
 DISTCLEANFILES="src/*enums.*"
@@ -23,6 +20,6 @@ CYGCONF_ARGS+="
 	--disable-plugin
 	--with-coroutine=gthread
 	--with-examples --without-libview
-	--with-gtk=2.0
+	--with-gtk=3.0
 	ac_cv_header_winsock2_h=no
 "
