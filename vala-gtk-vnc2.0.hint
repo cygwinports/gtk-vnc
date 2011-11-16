@@ -1,0 +1,8 @@
+category: Gnome Net
+requires: vala vala-gvnc1.0
+external-source: gtk-vnc
+sdesc: "GTK+ VNC viewer widget (Vala bindings)"
+ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 
+coroutines allowing it to be completely asynchronous while remaining 
+single threaded. It provides a core C library, and bindings for Python 
+(PyGTK)."
