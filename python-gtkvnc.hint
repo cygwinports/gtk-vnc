@@ -1,7 +1,7 @@
-category: Gnome Net
-requires: vala
+category: Gnome Python
+requires: libglib2.0_0 libgtk2.0_0 libgtk-vnc1.0_0 python python-gobject python-gtk2.0
 external-source: gtk-vnc
-sdesc: "GLib VNC library (Vala bindings)"
+sdesc: "GTK+2 VNC viewer widget (Python bindings)"
 ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 
 coroutines allowing it to be completely asynchronous while remaining 
 single threaded. It provides a core C library, and bindings for Python 
