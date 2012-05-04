@@ -3,7 +3,8 @@ inherit pygtk gnome2
 DESCRIPTION="GTK+ VNC viewer widget"
 HOMEPAGE="http://gtk-vnc.sourceforge.net/"
 
-PATCH_URI="0.4.4-no-undefined.patch"
+PATCH_URI="0.4.4-no-undefined.patch
+           0.5.0-autoconf.patch"
 
 DEPEND="gnome-common
 	libsasl2-devel
@@ -12,6 +13,7 @@ DEPEND="gnome-common
 	pkgconfig(gnutls)
 	pkgconfig(gtk+-2.0)
 	pkgconfig(gtk+-3.0)
+	pkgconfig(libpulse-simple)
 	pkgconfig(zlib)
 	vala(gtk+-2.0)
 	vala(gtk+-3.0)"
@@ -25,11 +27,11 @@ libgtk_vnc1_0_0_CONTENTS="usr/bin/cyggtk-vnc-1.0-0.dll"
 libgtk_vnc1_0_devel_CONTENTS="usr/include/gtk-vnc-1.0/ usr/lib/libgtk-vnc-1.0.* usr/lib/pkgconfig/gtk-vnc-1.0.pc"
 libgtk_vnc2_0_0_CONTENTS="usr/bin/cyggtk-vnc-2.0-0.dll"
 libgtk_vnc2_0_devel_CONTENTS="usr/include/gtk-vnc-2.0/ usr/lib/libgtk-vnc-2.0.* usr/lib/pkgconfig/gtk-vnc-2.0.pc"
-libgvnc1_0_0_CONTENTS="usr/bin/cyggvnc-1.0-0.dll"
-libgvnc1_0_devel_CONTENTS="usr/include/gvnc-1.0/ usr/lib/libgvnc-1.0.* usr/lib/pkgconfig/gvnc-1.0.pc"
+libgvnc1_0_0_CONTENTS="usr/bin/cyggvnc*-1.0-0.dll"
+libgvnc1_0_devel_CONTENTS="usr/include/gvnc*-1.0/ usr/lib/libgvnc*-1.0.* usr/lib/pkgconfig/gvnc*-1.0.pc"
 girepository_GtkVnc1_0_CONTENTS="usr/*/gir*/GtkVnc-1.0.*"
 girepository_GtkVnc2_0_CONTENTS="usr/*/gir*/GtkVnc-2.0.*"
-girepository_GVnc1_0_CONTENTS="usr/*/gir*/GVnc-1.0.*"
+girepository_GVnc1_0_CONTENTS="usr/*/gir*/GVnc*-1.0.*"
 python_gtkvnc_CONTENTS=${PYTHON_SITELIB#/}
 vala_gtk_vnc_CONTENTS="usr/share/vala/vapi/"
 
@@ -63,3 +65,5 @@ src_install() {
 	cd ${B}/gtk3
 	cyginstall
 }
+
+KEEP_LA_FILES="none"

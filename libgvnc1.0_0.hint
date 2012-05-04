@@ -1,5 +1,5 @@
 category: Gnome Net
-requires: libgcrypt11 libgdk_pixbuf2.0_0 libglib2.0_0 libgnutls26 libsasl2 zlib0
+requires: libgcrypt11 libgdk_pixbuf2.0_0 libglib2.0_0 libgnutls26 libpulse0 libpulse-simple0 libsasl2 zlib0
 external-source: gtk-vnc
 sdesc: "GLib VNC library (runtime)"
 ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 
