@@ -1,8 +1,0 @@
-category: Gnome Net
-requires: libgcrypt11 libgdk_pixbuf2.0_0 libglib2.0_0 libgnutls26 libpulse0 libpulse-simple0 libsasl2 zlib0
-external-source: gtk-vnc
-sdesc: "GLib VNC library (runtime)"
-ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 
-coroutines allowing it to be completely asynchronous while remaining 
-single threaded. It provides a core C library, and bindings for Python 
-(PyGTK)."

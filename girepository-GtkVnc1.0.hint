@@ -1,8 +1,0 @@
-category: Gnome Net
-requires: girepository-Gtk2.0 girepository-GVnc1.0 libgtk-vnc1.0_0
-external-source: gtk-vnc
-sdesc: "GTK+2 VNC viewer widget (GObject Introspection bindings)"
-ldesc: "gtk-vnc is a VNC viewer widget for GTK. It is built using 
-coroutines allowing it to be completely asynchronous while remaining 
-single threaded. It provides a core C library, and bindings for Python 
-(PyGTK)."

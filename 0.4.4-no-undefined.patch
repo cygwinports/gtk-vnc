@@ -18,7 +18,7 @@
 -gtkvnc_la_LIBADD = libgtk-vnc-$(GTK_VNC_API_VERSION).la $(PYGTK_LIBS)
 +gtkvnc_la_LIBADD = libgtk-vnc-$(GTK_VNC_API_VERSION).la $(PYGTK_LIBS) -lpython$(PYTHON_VERSION)
  gtkvnc_la_CFLAGS = $(GTK_CFLAGS) $(PYTHON_INCLUDES) \
- 		   $(PYGTK_CFLAGS) $(WARNING_PYTHON_CFLAGS)
+ 		   $(PYGTK_CFLAGS) $(WARN_PYTHON_CFLAGS)
 -gtkvnc_la_LDFLAGS = -module -avoid-version -fPIC
 +gtkvnc_la_LDFLAGS = -module -avoid-version $(NO_UNDEFINED_FLAGS)
  gtkvnc_la_SOURCES = vncmodule.c
