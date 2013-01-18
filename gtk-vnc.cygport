@@ -2,8 +2,8 @@ inherit pygtk gnome2
 
 NAME="gtk-vnc"
 VERSION=0.5.1
-RELEASE=1
-CATEGORY="Gnome Net"
+RELEASE=2
+CATEGORY="GNOME Net"
 SUMMARY="GTK+ VNC viewer widget"
 DESCRIPTION="gtk-vnc is a VNC viewer widget for GTK. It is built using
 coroutines allowing it to be completely asynchronous while remaining
@@ -86,4 +86,3 @@ src_install() {
 	cyginstall
 }
 
-KEEP_LA_FILES="none"
