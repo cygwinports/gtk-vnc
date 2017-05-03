@@ -2,7 +2,7 @@ inherit pygtk gnome2
 
 NAME="gtk-vnc"
 VERSION=0.7.0
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="GTK+ VNC viewer widget"
 DESCRIPTION="gtk-vnc is a VNC viewer widget for GTK. It is built using
